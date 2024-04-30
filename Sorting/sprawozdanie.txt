@@ -1,0 +1,2 @@
+Prosta aktywność z przyciskiem oraz 5 checkbox'ami odpowadającymi za algorytmy sortowania.
+Można zaznaczyć więcej niż jeden na raz i będzie działać. Po nacisnięciu przycisku powinno działać.
