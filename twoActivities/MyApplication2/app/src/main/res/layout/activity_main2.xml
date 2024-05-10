@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/etykieta2a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="86dp"
+        android:text="otrzymano"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tekst2a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:text="---"
+        app:layout_constraintStart_toStartOf="@+id/etykieta2a"
+        app:layout_constraintTop_toBottomOf="@+id/etykieta2a" />
+
+    <TextView
+        android:id="@+id/etykieta2b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="do wysłania"
+        app:layout_constraintStart_toStartOf="@+id/tekst2a"
+        app:layout_constraintTop_toBottomOf="@+id/tekst2a" />
+
+    <EditText
+        android:id="@+id/tekst2b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etykieta2b" />
+
+    <Button
+        android:id="@+id/klawisz2a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="67dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="@+id/tekst2b"
+        app:layout_constraintTop_toBottomOf="@+id/tekst2b" />
+</androidx.constraintlayout.widget.ConstraintLayout>
