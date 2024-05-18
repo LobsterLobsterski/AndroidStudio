@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myapplication.databinding.ActivityMain2Binding
-import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivityMain2Binding
@@ -24,10 +23,10 @@ class MainActivity2 : AppCompatActivity() {
         val tekst = dane_in.getString("tekst")
         binding.tekst2a.text = tekst
 
-        setContentView(R.layout.activity_main2)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right,
+                systemBars.bottom)
             insets
         }
     }
@@ -36,8 +35,8 @@ class MainActivity2 : AppCompatActivity() {
     }
     override fun finish() {
         val data = Intent()
-        val tekstZwrotnyg = binding.tekst2b.text.toString()
-        data.putExtra("daneZwrotne", tekstZwrotnyg)
+        val tekstZwrotny = binding.tekst2b.text.toString()
+        data.putExtra("daneZwrotne", tekstZwrotny)
         setResult(RESULT_OK, data)
         super.finish()
     }

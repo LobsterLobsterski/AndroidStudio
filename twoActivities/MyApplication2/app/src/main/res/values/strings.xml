@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="button">Button</string>
+    <string name="halo">halo</string>
+    <string name="name">Name</string>
+    <string name="otrzymano">otrzymano</string>
+    <string name="do_wys_ania">do wysłania</string>
+    <string name="button2">Button</string>
+    <string name="tekst2a">---</string>
+    <string name="answer">answer</string>
 </resources>

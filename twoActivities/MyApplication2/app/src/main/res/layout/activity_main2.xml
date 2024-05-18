@@ -11,49 +11,53 @@
         android:id="@+id/etykieta2a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="86dp"
-        android:text="otrzymano"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="51dp"
+        android:text="@string/otrzymano"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tekst2a"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tekst2a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:text="---"
-        app:layout_constraintStart_toStartOf="@+id/etykieta2a"
-        app:layout_constraintTop_toBottomOf="@+id/etykieta2a" />
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/tekst2a"
+        app:layout_constraintBottom_toTopOf="@+id/tekst2b"
+        app:layout_constraintStart_toEndOf="@+id/etykieta2a" />
 
     <TextView
         android:id="@+id/etykieta2b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:text="do wysłania"
-        app:layout_constraintStart_toStartOf="@+id/tekst2a"
-        app:layout_constraintTop_toBottomOf="@+id/tekst2a" />
+        android:layout_marginTop="212dp"
+        android:text="@string/do_wys_ania"
+        app:layout_constraintEnd_toStartOf="@+id/klawisz2a"
+        app:layout_constraintStart_toStartOf="@+id/etykieta2a"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tekst2b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="16dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/answer"
         android:inputType="text"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etykieta2b" />
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etykieta2b"
+        app:layout_constraintStart_toEndOf="@+id/etykieta2b" />
 
     <Button
         android:id="@+id/klawisz2a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="67dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/tekst2b"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="96dp"
+        android:onClick="odeslijTekst"
+        android:text="@string/button2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tekst2b" />
 </androidx.constraintlayout.widget.ConstraintLayout>

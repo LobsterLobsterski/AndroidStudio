@@ -11,7 +11,7 @@
         android:id="@+id/tekst1a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="halo"
+        android:text="@string/halo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,21 +22,25 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
         android:onClick="wyslijTekst"
-        android:text="Button"
+        android:text="@string/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="248dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tekst1a" />
 
     <EditText
         android:id="@+id/tekst1b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
         android:ems="10"
+        android:hint="@string/name"
         android:inputType="text"
-        android:text="Name"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="355dp" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

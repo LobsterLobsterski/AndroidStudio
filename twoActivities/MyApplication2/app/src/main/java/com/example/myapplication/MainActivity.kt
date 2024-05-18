@@ -29,16 +29,18 @@ class MainActivity : AppCompatActivity() {
                 systemBars.bottom)
             insets
         }
-        val startForResult = registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult()) {
-                result ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                val data = result.data
-                data?.let {
-                    if (it.hasExtra("daneZwrotne")) {
-                        val returnString = it.extras?.getString("daneZwrotne")
-                        binding.tekst1a.text = returnString
-                    }
+
+    }
+
+    val startForResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()) {
+            result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data = result.data
+            data?.let {
+                if (it.hasExtra("daneZwrotne")) {
+                    val returnString = it.extras?.getString("daneZwrotne")
+                    binding.tekst1a.text = returnString
                 }
             }
         }
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         val i = Intent(this, MainActivity2::class.java)
         val tekstOut = binding.tekst1b.text.toString()
         i.putExtra("tekst", tekstOut)
-        startActivity(i)
+        startForResult.launch(i)
 
     }
 
