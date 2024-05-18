@@ -24,4 +24,8 @@ class BlankFragment2 : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    fun ZmienTekst(tekst: String) {
+        binding.tekstF2a.text = tekst
+    }
 }
