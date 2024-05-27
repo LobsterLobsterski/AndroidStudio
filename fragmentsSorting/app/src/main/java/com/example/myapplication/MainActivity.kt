@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), Fragment1.PierwszyListener  {
         }
     }
     override fun doFragmentu2(tekst: String) {
-        var drugiFragment = supportFragmentManager.findFragmentById(R.id.fragment2)
+        var drugiFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2)
                 as Fragment2
         drugiFragment.zmienTekst(tekst)
     }
