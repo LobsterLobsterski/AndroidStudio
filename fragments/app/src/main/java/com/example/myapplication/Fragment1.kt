@@ -6,33 +6,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.myapplication.databinding.FragmentBlankBinding
+import  com.example.myapplication.databinding.Fragment1Binding
 
-
-class BlankFragment : Fragment() {
-    private var _binding: FragmentBlankBinding? = null
+class Fragment1 : Fragment() {
+    private var _binding: Fragment1Binding? = null
     private val binding get() = _binding!!
 
-    var activityCallback: BlankFragment.PierwszyListener? = null
-    interface PierwszyListener {
-        fun onButtonClick(text: String)
+    var pierwszyFragmentCallback: Listener1? = null
+
+    interface Listener1 {
+        fun toFragment2(tekst: String)
     }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         try {
-            activityCallback = context as PierwszyListener
+            pierwszyFragmentCallback = context as Listener1
         } catch (e: ClassCastException) {
             throw ClassCastException(context.toString()
-                    + " trzeba zaimplementować PierwszyListener")
+                    + " need to implement Listener1")
         }
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentBlankBinding.inflate(inflater, container, false)
+        _binding = Fragment1Binding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -43,10 +44,12 @@ class BlankFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.klawiszF1a.setOnClickListener { v: View -> buttonClicked(v) }
+        binding.klawiszFa.setOnClickListener { v: View -> onButtonFaClicked(v) }
     }
-    private fun buttonClicked(view: View) {
-        activityCallback?.onButtonClick(binding.tekstF1a.text.toString())
+    private fun onButtonFaClicked(view: View) {
+        pierwszyFragmentCallback?.toFragment2(binding.tekstFaOut.text.toString())
     }
-
+    fun zmienTekst(tekst: String) {
+        binding.tekstFaIn.text = tekst
+    }
 }
