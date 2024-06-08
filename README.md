@@ -6,3 +6,5 @@ Exercise1 -> fragments/ and twoActivities/
 
 Lab3 -> twoActivitiesSorting/ and twoFragmentsSorting/
 
+**Projekt zaliczeniowy** -> PROJEKT/
+
